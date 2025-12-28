@@ -1,0 +1,12 @@
+base: world_baseline.yaml
+world:
+  local_media_reach: 0.1
+  national_media_reach: 0.5
+  media_fragmentation: 0.65
+  trust_baselines:
+    gov: 0.5
+    church: 0.4
+    local_news: 0.3
+    national_news: 0.45
+    friends: 0.6
+    outgroups: 0.3

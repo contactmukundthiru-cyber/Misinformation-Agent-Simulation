@@ -1,0 +1,60 @@
+[project]
+name = "town-misinfo-sim"
+version = "0.1.0"
+description = "Agent-based Town Misinformation Contagion Simulator"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "Mukund Thiru"}]
+
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.1",
+  "pyyaml>=6.0",
+  "pydantic>=2.6",
+  "networkx>=3.2",
+  "torch>=2.1",
+  "matplotlib>=3.8",
+  "streamlit>=1.30",
+  "rich>=13.7",
+  "pyarrow>=14.0",
+]
+
+[project.optional-dependencies]
+igraph = ["python-igraph>=0.11"]
+dev = [
+  "pytest>=7.4",
+  "pytest-cov>=4.1",
+  "ruff>=0.6",
+  "mypy>=1.7",
+  "types-PyYAML>=6.0",
+  "pandas-stubs>=2.0",
+]
+
+[project.scripts]
+misinfo-sim = "sim.cli:main"
+
+[build-system]
+requires = ["hatchling>=1.18"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+package = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["sim"]
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "I"]
+exclude = [".venv", "runs"]
+
+[tool.mypy]
+python_version = "3.11"
+warn_unused_ignores = true
+disallow_untyped_defs = false
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]

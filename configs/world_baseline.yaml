@@ -1,0 +1,140 @@
+sim:
+  n_agents: 5000
+  n_claims: 5
+  steps: 365
+  snapshot_interval: 30
+  seed: 42
+  device: auto
+  deterministic: true
+  seed_fraction: 0.01
+  adoption_threshold: 0.7
+
+town:
+  n_neighborhoods: 12
+  neighborhood_grid: [3, 4]
+  household_size_mean: 3.0
+  household_size_std: 1.0
+  workplace_size_mean: 18.0
+  school_size_mean: 22.0
+  church_size_mean: 40.0
+  church_attendance_rate: 0.25
+  min_age: 0
+  max_age: 90
+  children_fraction: 0.22
+  senior_fraction: 0.16
+
+network:
+  homophily_strength: 0.6
+  geography_strength: 0.5
+  geo_scale: 1.5
+  intra_neighborhood_p: 0.05
+  inter_neighborhood_p: 0.01
+  layer_multipliers:
+    family: 1.6
+    work: 1.1
+    school: 1.0
+    church: 1.2
+    neighborhood: 0.8
+
+world:
+  trust_baselines:
+    gov: 0.55
+    church: 0.45
+    local_news: 0.5
+    national_news: 0.45
+    friends: 0.6
+    outgroups: 0.3
+  trust_variance: 0.12
+  church_centrality: 0.4
+  local_media_reach: 0.4
+  national_media_reach: 0.35
+  gov_reach: 0.3
+  algorithmic_amplification: 0.4
+  moderation_strictness: 0.4
+  platform_friction: 0.2
+  governance_response_speed: 0.5
+  governance_transparency: 0.5
+  media_fragmentation: 0.4
+  outrage_amplification: 0.3
+  feed_injection_rate: 0.15
+  debunk_intensity: 0.25
+  emotions_enabled: true
+  reactance_enabled: false
+  trust_update_enabled: false
+  trust_erosion_rate: 0.02
+
+belief_update:
+  eta: 0.25
+  rho: 0.18
+  alpha: 0.9
+  beta: 0.6
+  gamma: 0.4
+  delta: 0.5
+  lambda_skepticism: 0.7
+  mu_debunk: 0.8
+  exposure_memory_decay: 0.75
+  belief_decay: 0.02
+  baseline_belief: 0.05
+  social_proof_threshold: 0.6
+  reactance_strength: 0.3
+
+sharing:
+  base_share_rate: 0.02
+  belief_sensitivity: 2.2
+  emotion_sensitivity: 0.6
+  status_sensitivity: 0.5
+  conformity_sensitivity: 0.4
+  moderation_risk_sensitivity: 0.5
+
+moderation:
+  warning_effect: 0.35
+  downrank_effect: 0.4
+
+strains:
+  - name: silver_river
+    topic: health_rumor
+    memeticity: 0.55
+    emotional_profile: {fear: 0.6, anger: 0.2, hope: 0.2}
+    falsifiability: 0.7
+    stealth: 0.4
+    mutation_rate: 0.05
+    violation_risk: 0.3
+  - name: market_shiver
+    topic: economic_panic
+    memeticity: 0.6
+    emotional_profile: {fear: 0.5, anger: 0.3, hope: 0.2}
+    falsifiability: 0.6
+    stealth: 0.45
+    mutation_rate: 0.04
+    violation_risk: 0.35
+  - name: temple_echo
+    topic: moral_spiral
+    memeticity: 0.5
+    emotional_profile: {fear: 0.3, anger: 0.4, hope: 0.3}
+    falsifiability: 0.5
+    stealth: 0.55
+    mutation_rate: 0.06
+    violation_risk: 0.4
+  - name: signal_fog
+    topic: tech_conspiracy
+    memeticity: 0.58
+    emotional_profile: {fear: 0.2, anger: 0.5, hope: 0.3}
+    falsifiability: 0.65
+    stealth: 0.5
+    mutation_rate: 0.05
+    violation_risk: 0.45
+  - name: border_whisper
+    topic: outsider_threat
+    memeticity: 0.62
+    emotional_profile: {fear: 0.4, anger: 0.4, hope: 0.2}
+    falsifiability: 0.55
+    stealth: 0.5
+    mutation_rate: 0.04
+    violation_risk: 0.5
+
+metrics:
+  community_backend: auto
+  community_max_nodes: 20000
+  include_neighborhood_clusters: true
+  cluster_penetration_enabled: true
+  use_gpu_metrics: true

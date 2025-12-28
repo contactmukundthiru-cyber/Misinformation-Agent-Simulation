@@ -1,0 +1,75 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# Type checking
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Simulation outputs (large generated files)
+runs/
+*.parquet
+
+# Validation output data (keep markdown summaries)
+validation_results/*.csv
+validation_results/figures/
+validation_results/statistics/
+
+# OS
+.DS_Store
+Thumbs.db
+*.log
+
+# Secrets (if any)
+.env
+.env.*
+*.pem
+*.key
+credentials.json
+secrets.yaml

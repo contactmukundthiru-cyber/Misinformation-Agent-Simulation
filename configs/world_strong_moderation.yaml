@@ -1,0 +1,8 @@
+base: world_baseline.yaml
+world:
+  moderation_strictness: 0.85
+  platform_friction: 0.4
+  debunk_intensity: 0.35
+moderation:
+  warning_effect: 0.5
+  downrank_effect: 0.55

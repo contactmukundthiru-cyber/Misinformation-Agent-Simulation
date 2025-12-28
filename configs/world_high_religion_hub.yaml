@@ -1,0 +1,20 @@
+base: world_baseline.yaml
+town:
+  church_attendance_rate: 0.45
+  church_size_mean: 55.0
+network:
+  layer_multipliers:
+    family: 1.6
+    work: 1.0
+    school: 0.9
+    church: 1.6
+    neighborhood: 0.8
+world:
+  church_centrality: 0.7
+  trust_baselines:
+    gov: 0.5
+    church: 0.65
+    local_news: 0.45
+    national_news: 0.4
+    friends: 0.6
+    outgroups: 0.28

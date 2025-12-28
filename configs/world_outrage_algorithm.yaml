@@ -1,0 +1,6 @@
+base: world_baseline.yaml
+world:
+  algorithmic_amplification: 0.9
+  outrage_amplification: 0.8
+  feed_injection_rate: 0.25
+  platform_friction: 0.15

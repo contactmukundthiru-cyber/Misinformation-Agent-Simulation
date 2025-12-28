@@ -1,0 +1,13 @@
+base: world_baseline.yaml
+world:
+  trust_baselines:
+    gov: 0.8
+    church: 0.45
+    local_news: 0.55
+    national_news: 0.5
+    friends: 0.6
+    outgroups: 0.35
+  gov_reach: 0.45
+  debunk_intensity: 0.35
+  governance_response_speed: 0.7
+  governance_transparency: 0.7
